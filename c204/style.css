@@ -1,0 +1,15 @@
+#Max-heapify-control {
+    color: #00ccff;
+}
+
+#Max-heapify-control:hover {
+    text-decoration: underline;
+}
+
+.hidden { 
+    display: none;
+}
+
+.comment {
+    color: gray;
+}

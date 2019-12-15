@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CMPUT 204 Review</title>
+    <meta charset="utf-8">
+    <meta meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CMPUT 204 Review</h1>
+    <h2>Content</h2>
+    <h3>1. Induction</h3>
+    <h3>2. Loop Invariant (LI)</h3>
+    <h3>3. Asymptotic Notation</h3>
+    <h3>4. Recurrence</h3>
+    <h3><a href="#content-5">5. Heap</a></h3>
+
+    <h3 id="content-5">5. Heap</h3>
+    <code>
+        procedure Max-heapify(A, i)</br>
+    </code>
+    <code id="Max-heapify" class="hidden">
+        <div class="comment">
+        &nbsp ** turn almost-heap into heap</br>
+        &nbsp ** pre-condition: tree rooted at A[i] is an almost-heap</br>
+        &nbsp ** post-condition: tree rooted at A[i] is a heap</br>
+        </div>
+        &nbsp lc <- leftchild(i)</br>
+        &nbsp rc <- rightchild(i)</br>
+        &nbsp largest <- i</br>
+        &nbsp if (lc <= heapsize(A) and A[lc] > A[largest]) then</br>
+        &nbsp   largest <- lc</br>
+        &nbsp if (rc <= heapsize(A) and A[rc] > A[largest]) then</br>
+        &nbsp   largest <- rc</br>
+        &nbsp if (largest != i) then</br>
+        &nbsp   swap(A[i], A[largest])</br>
+        &nbsp   Max-heapify(A, largest)</br>
+    </code>
+    <div id="Max-heapify-control">
+        Show Pseudocode
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
