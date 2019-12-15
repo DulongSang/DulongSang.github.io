@@ -5,15 +5,36 @@
     <meta charset="utf-8">
     <meta meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
 </head>
 <body>
     <h1>CMPUT 204 Review</h1>
     <h2>Content</h2>
     <h3>1. Induction</h3>
-    <h3>2. Loop Invariant (LI)</h3>
-    <h3>3. Asymptotic Notation</h3>
+    <h3><a href="#content-2">2. Loop Invariant (LI)</a></h3>
+    <h3><a href="#content-3">3. Asymptotic Notation</a></h3>
     <h3>4. Recurrence</h3>
     <h3><a href="#content-5">5. Heap</a></h3>
+    <h3>6. Sorting Algorithms</h3>
+
+    <h3 id="content-2">2. Loop Invariant (LI)</h3>
+    <div>An assertion about the state of the code that is always true at the <b>beginning</b> of each loop iteration.</div>
+    <div><b>Initialization,</b></br>
+        <b>Maintenance</b>: if the LI holds at the beginning of j-th iteration, 
+        prove that the LI holds at the beginning of (j+1)-th iteration.</br>
+        <b>Termination</b>: (will terminate and get correct result)</br>
+    </div>
+
+    <h3 id="content-3">3. Asymptotic Notation</h3>
+    <div>
+        <i>O(f(n))</i> is a set of function <i>h(n)</i> that</br>
+        &nbsp roughly, grow <b>no faster than</b> <i>f(n)</i></br>
+        &nbsp formally, <i>h(n) ∈ O(f(n))</i> if ∃<i>c > 0, n_0 ∈ N</i>, such that for all <i>n ≥ n_0</i> we have <i>h(n) ≤ cf(n)</i>.</br>
+        
+    </div>
 
     <h3 id="content-5">5. Heap</h3>
     <code>
