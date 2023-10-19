@@ -94,10 +94,7 @@ function barChart(parentId, freq) {
 function performShift(freq, shiftAmount) {
   const shiftedFreq = {}
   for (const letter of ALPHABET) {
-    let index = ALPHABET.indexOf(letter) - shiftAmount;
-    if (index < 0) {
-      index += ALPHABET.length;
-    }
+    let index = (ALPHABET.indexOf(letter) + shiftAmount) % ALPHABET.length;
     shiftedFreq[letter] = freq[ALPHABET[index]];
   }
   return shiftedFreq;
@@ -159,14 +156,14 @@ document.getElementById('analyze-button').onclick = () => {
 
 let shiftAmount = 0;
 document.getElementById('shift-left-btn').onclick = () => {
-  shiftAmount = shiftAmount == 0 ? ALPHABET.length - 1 : shiftAmount - 1;
+  shiftAmount = shiftAmount == ALPHABET.length - 1 ? 0 : shiftAmount + 1;
   document.getElementById('shift-amount-container').innerText = `Shift amount: ${shiftAmount} (${ALPHABET[shiftAmount]})`;
   const shiftedFreq = performShift(letterFreq, shiftAmount);
   barChart('result-container', shiftedFreq);
   updateFreqTable(shiftedFreq);
 };
 document.getElementById('shift-right-btn').onclick = () => {
-  shiftAmount = shiftAmount == ALPHABET.length - 1 ? 0 : shiftAmount + 1;
+  shiftAmount = shiftAmount == 0 ? ALPHABET.length - 1 : shiftAmount - 1;
   document.getElementById('shift-amount-container').innerText = `Shift amount: ${shiftAmount} (${ALPHABET[shiftAmount]})`;
   const shiftedFreq = performShift(letterFreq, shiftAmount);
   barChart('result-container', shiftedFreq);
