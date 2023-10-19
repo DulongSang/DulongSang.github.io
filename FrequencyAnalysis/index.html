@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Letter Frequency Analysis Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="page-container" style="margin: 5vh 5vw">
+    <h1>Letter Frequency Analysis Tool</h1>
+    <div>
+      <textarea
+        id="message-input"
+        placeholder="Insert Text To Be Analyzed Here"
+        style="height: 20vh; width: 100%"
+      ></textarea>
+    </div>
+    <div>
+      <button id="analyze-button">Anaylze</button>
+    </div>
+    <div id="result-container" style="margin: 10px"></div>
+    <div id="shift-amount-container" style="text-align: center;">
+      Shift amount: 0 (A)
+    </div>
+    <div id="shift-button-container" style="text-align: center;">
+      <button id="shift-left-btn" style="font-size: x-large;" title="shift left">←</button>
+      <button id="shift-right-btn" style="font-size: x-large;" title="shift right">→</button>
+    </div>
+    <div id="frequency-table-container" style="height: 10vh; margin: 20px 0">
+
+    </div>
+    <footer>
+      <p>
+        <h3>Reference</h3>
+        This tool is inspired by <a href="https://simonsingh.net/The_Black_Chamber/letterfrequencies.html">The Black Chamber/letterfrequencies</a><br />
+      </p>
+      <p>©DS 2023</p>
+      <p>Last update: Oct 19, 2023</p>
+    </footer>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
