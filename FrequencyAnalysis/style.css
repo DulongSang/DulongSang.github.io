@@ -2,6 +2,64 @@
     opacity: 70%;
 }
 
-table, th, td {
-    border: 1px solid black;
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+    width: 3.8%;
+}
+
+.table-header {
+    background-color: #95c2e0;
+}
+
+.table-data {
+    background-color: #ffffff;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Hover effect */
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Active (clicked) state */
+button:active {
+    background-color: #1c6ea4;
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Hover effect */
+textarea:hover {
+    border-color: #3498db;
+}
+
+/* Focus (clicked) state */
+textarea:focus {
+    border-color: #2980b9;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.7);
 }

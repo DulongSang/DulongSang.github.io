@@ -128,7 +128,9 @@ function getLetterFrequencies(message) {
 function updateFreqTable(freq) {
   const table = document.createElement('table');
   const headerRow = document.createElement('tr');
+  headerRow.setAttribute('class', 'table-header');
   const dataRow = document.createElement('tr');
+  dataRow.setAttribute('class', 'table-data')
   ALPHABET.forEach(letter => {
     const header = document.createElement('th');
     header.innerText = letter;
@@ -144,6 +146,7 @@ function updateFreqTable(freq) {
 
 let letterFreq = getLetterFrequencies('');
 barChart('result-container', letterFreq);
+updateFreqTable(letterFreq);
 
 document.getElementById('analyze-button').onclick = () => {
   const message = document.getElementById('message-input').value;
